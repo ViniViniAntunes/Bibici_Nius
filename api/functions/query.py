@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 
 from creds.credentials import credentials
 
@@ -12,8 +13,12 @@ def query(keyword, all_articles=False):
     
     :return: dict
     '''
+    infos_BQ = json.load('crawler\infos\BigQuery_infos.json')
+    
+    project_id = infos_BQ['project_id']
+    dataset_id = infos_BQ['dataset_id']
+    table_id = infos_BQ['table_id']
 
-    project_id = 'vini-project-379618'
     all = ''
     
     if all_articles:
@@ -23,7 +28,7 @@ def query(keyword, all_articles=False):
         SELECT
             *
         FROM
-            `{project_id}.coding_test_lima_consulting.bbc_news`
+            `{project_id}.{dataset_id}.{table_id}`
         {all}WHERE CONTAINS_SUBSTR(Headline, "{keyword}")
     '''
 
