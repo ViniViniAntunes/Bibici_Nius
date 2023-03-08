@@ -1,0 +1,33 @@
+{
+    "project_id": "vini-project-379618",
+    "dataset_id": "code_challenges",
+    "table_id": "bibici_nius",
+    "table_schema": [
+        {
+            "name": "Headline",
+            "type": "STRING"
+        },
+        {
+            "name": "Authors",
+            "type": "STRING"
+        },
+        {
+            "name": "Publication_datetime",
+            "type": "DATETIME"
+        },
+        {
+            "name": "Article",
+            "type": "STRING"
+        },
+        {
+            "name": "URL",
+            "type": "STRING"
+        },
+        {
+            "name": "Redirected_URL",
+            "type": "STRING"
+        }
+    ],
+
+    "if_exists": "replace"
+}
