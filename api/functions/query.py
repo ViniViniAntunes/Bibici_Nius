@@ -1,6 +1,6 @@
 import pandas as pd
-import json
 
+from crawler.functions.get_GBQ_infos import get_GBQ_infos
 from creds.credentials import credentials
 
 def query(keyword, all_articles=False):
@@ -13,7 +13,7 @@ def query(keyword, all_articles=False):
     
     :return: dict
     '''
-    infos_BQ = json.load('crawler\infos\BigQuery_infos.json')
+    infos_BQ = get_GBQ_infos('crawler\infos\BigQuery_infos.json')
     
     project_id = infos_BQ['project_id']
     dataset_id = infos_BQ['dataset_id']

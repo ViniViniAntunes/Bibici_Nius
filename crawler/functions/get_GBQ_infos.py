@@ -1,7 +1,7 @@
 import json
 
 # Prepare the upload
-def prepare_upload(file_path):
+def get_GBQ_infos(file_path):
     '''
     Returns a dict with a BigQuery infos from JSON file
 

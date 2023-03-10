@@ -22,8 +22,7 @@ api.add_resource(Article, '/Article/<keyword>')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    
     # Getting raw URLs from main page
     raw_urls = raw_urls()
     
@@ -36,3 +35,5 @@ if __name__ == '__main__':
 
     # Upload to BigQuery
     upload_to_BigQuery(data)
+
+    app.run(debug=True)

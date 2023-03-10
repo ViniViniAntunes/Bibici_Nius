@@ -1,7 +1,5 @@
-import json
-
 from creds.credentials import credentials
-from crawler.functions.prepare_upload import prepare_upload
+from crawler.functions.get_GBQ_infos import get_GBQ_infos
 
 def upload_to_BigQuery(data):
     '''
@@ -12,7 +10,7 @@ def upload_to_BigQuery(data):
     :return: no return.
     '''
     
-    infos_BQ = prepare_upload('crawler\infos\BigQuery_infos.json')
+    infos_BQ = get_GBQ_infos('crawler\infos\BigQuery_infos.json')
     
     project_id = infos_BQ['project_id']
     dataset_id = infos_BQ['dataset_id']

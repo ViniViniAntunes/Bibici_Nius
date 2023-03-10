@@ -18,6 +18,8 @@ def crawl_all_pages(urls):
     publications_date_time = []
     article_texts = []
 
+    print('Wait few seconds. Crawling pages...')
+
     for url in urls:
         
         # Getting the HTML from each page
@@ -127,6 +129,8 @@ def crawl_all_pages(urls):
 
     data = pd.DataFrame(data_dict)
 
+    print(f'Crawling finished!')
+    print(f'{data.shape[0]} articles were founded')
     
     for col in data.columns:
         if col != 'Publication_datetime':
