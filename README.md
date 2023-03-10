@@ -116,9 +116,9 @@
 <h2><img src="./img/user_guide.png" width=50px/> How to use? </h2>
 <div>
   <ul>
-    <li> Download the repo and run <code> app.py </code></li>
+    <li> Download the repo and run <code>app.py</code></li>
     <li> Click on the link that appears in the terminal output </li>
-    <li> In the search bar, add on the end of the URL <code> /Article/*KEYWORD* </code> (to search for a specific keyword) or <code> /AllArticles </code> (to search all articles in the database - around 30 articles).
+    <li> In the search bar, add on the end of the URL <code>/Article/*KEYWORD*</code> (to search for a specific keyword) or <code>/AllArticles</code> (to search all articles in the database - around 30 articles).
     </li>
   </ul>
 </div>
